@@ -1,5 +1,5 @@
-QASystem\bin\
-QASystem\obj\
-QASystem.Domain\bin\
-QASystem.Domain\obj\
-QASystem.Domain\Migrations\
+QASystem/bin
+QASystem/obj
+QASystem.Domain/bin
+QASystem.Domain/obj
+QASystem.Domain/Migrations
