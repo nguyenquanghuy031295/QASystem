@@ -1,0 +1,524 @@
+/*
+Theme Name: Civic Stack
+Theme URI: http://wpverse.com/
+Description: WordPress theme with comment voting.
+Author: WPVerse.com and imoz32
+Version: 1.5
+Tags: white, simple, comments, voting
+*/
+
+/* Layout */
+body {
+	background: #fff;
+}
+
+#wrap {
+	width: 1000px;
+	margin: auto;
+}
+
+header {
+	margin-top: -30px;
+    margin-bottom: -20px;
+}
+
+#title-area {
+	float: left;
+}
+
+#main-menu {
+	float: right;
+}
+
+nav {
+	float: right;
+	margin-top: 25px;
+}
+
+nav ul li {
+	float: left;
+	margin: 0 10px;
+}
+
+#main {
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
+}
+
+.column-header {
+	float: right;
+	padding-right: 15px;
+}
+
+.counterlist article {
+	min-height: 50px;
+	padding: 5px 0;
+}
+
+.image, .info {
+	border: 1px solid #ccc;
+	float: left;
+	height: 100%;
+	padding: 5px;
+	margin: 0 5px;
+}
+
+.counterlist article .image {
+	position: relative;
+	width: 50px;
+}
+
+.counterlist article .image img {
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	top: 5px;
+	width: 50px;
+}
+
+/* Sidebars */
+#left-sidebar {
+	float: left;
+	margin-top: 7px;
+	padding: 0 10px;
+	width: 230px;
+}
+
+.sidebar-widgets > li {
+	margin-bottom: 25px;
+	padding: 0 20px;
+	width: 230px;
+}
+
+.content-widgets {
+	padding: 20px 0;
+}
+
+/* Category boxes */
+#categories .info {
+	width: 543px;
+}
+
+#posts .info {
+	width: 603px;
+}
+
+/* Star Ratings */
+.star-rating {
+	margin-bottom: -15px;
+}
+
+.star-rating li {
+	float: left;
+	list-style-type: none !important;
+	margin-left: 0 !important;
+	padding: 2px;
+}
+
+.star-rating li a {
+	background: url(images/star.gif) no-repeat;
+	display: block;
+	height: 10px;
+	opacity: 0.5;
+	text-indent: -1000px;
+	width: 10px;
+}
+
+.star-rating li a.rating {
+	opacity: 1;
+}
+
+.star-rating li a.hovered {
+	opacity: 1 !important;
+}
+
+.star-rating-info {
+	color: #aaa;
+	font-size: 11px;
+	margin: 0;
+}
+
+/* List of Posts */
+#theposts > article {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+#theposts article .post-content {
+	width: 710px;
+}
+
+#theposts article .alignleft {
+	float: left;
+}
+
+#theposts article .aligncenter {
+	display: block;
+	margin: auto;
+}
+
+#theposts article .alignright {
+	float: right;
+}
+
+/* Single Posts */
+#thepost > article {
+	margin-bottom: 20px;
+}
+
+#thepost article h1, #thepost article h2, #thepost article h3 {
+	float: none;
+}
+
+#thepost h3 {
+	margin: 20px 0;
+}
+
+#thepost .postinfo {
+	margin-bottom: 20px;
+}
+
+/* Comments */
+#comments > li {
+	margin: 10px 0;
+}
+
+#comments li p {
+	margin: 0;
+}
+
+.comment {
+	width: 603px;
+}
+
+.comment img, .comment div {
+	float: left;
+}
+
+.pagination-older {
+	float: left;
+}
+
+.pagination-newer {
+	float: right;
+}
+
+footer {
+	border-top: 1px solid #ddd;
+	margin-top: 50px;
+	padding-bottom: 20px
+}
+
+#footer-widgets {
+	padding: 20px 0;
+}
+
+#footer-widgets > li {
+	float: left;
+	padding: 0 20px;
+	width: 210px;
+}
+
+/* Civic Boxes */
+.civic-boxes {
+	border-spacing: 10px;
+	width: 100%;
+}
+
+th.count-column {
+	padding: 0 !important;
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+
+th.count-column, td.count-cell {
+	font: bold 18px Arial, sans-serif;
+	text-align: center;
+	width: 50px;
+}
+
+.civic-boxes th, .civic-boxes td {
+	padding: 5px;
+	vertical-align: top;
+}
+
+.civic-boxes td {
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.civic-boxes .comment div {
+	margin-left: 10px;
+	width: 80%;
+}
+
+.civic-boxes p {
+	padding: 0;
+	margin: 0;
+}
+
+.comment-meta {
+	font-size: 11px;
+	color: #777;
+}
+
+.civic-boxes .count-cell {
+	vertical-align: middle;
+}
+
+.count-cell span {
+	display: block;
+}
+
+.count-up, .count-down {
+	background-image: url(images/updown.png);
+	display: block;
+	height: 15px;
+	margin: auto;
+	width: 30px;
+}
+
+.count-down {
+	background-position: 0 15px;
+}
+
+/* Typography */
+h1 {
+	font: bold 28px Arial, sans-serif;
+	margin: 5px 0;
+}
+
+h2 {
+	font: bold 20px Arial, sans-serif;
+}
+
+h3, h4 {
+	font: 22px Arial, sans-serif;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+p, li, dd, dt, td, th {
+	font: 12px Arial, sans-serif;
+	line-height: 2em;
+}
+
+p {
+	margin: 10px 0;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #aa3333;
+	text-decoration: none;
+}
+
+h3 a {
+	color: #000;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: 11px;
+}
+
+.gray {
+	color: #aaa;
+}
+
+.column-header {
+	font: bold 14px Arial, sans-serif;
+}
+.questionContent {
+	font-size: 18px;
+}
+
+article .info p > a {
+	border-bottom: 1px dotted #555;
+	color: #555;
+}
+
+article .info p > a:hover {
+	border-bottom: 1px solid #333;
+	color: #333;
+	text-decoration: none;
+}
+
+.postinfo, .info {
+	color: #999;
+}
+
+#thepost h2 {
+	font-size: 28px;
+}
+
+#thepost article li {
+	list-style-type: circle;
+	margin-left: 10px;
+}
+
+.form-allowed-tags {
+	color: #555;
+	font-size: 10px;
+}
+
+#leaderboard li {
+	border-bottom: 1px dotted #ccc;
+	line-height: 1.5em;
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 10px 0;
+}
+
+#leaderboard li:first-child {
+	border-top: 1px dotted #ccc;
+}
+
+#leaderboard li img, #leaderboard li div {
+	float: left;
+}
+
+#leaderboard li div {
+	padding-left: 10px;
+}
+
+/* Forms */
+input[type=text], input[type=submit] {
+	-moz-box-shadow: 0px 1px 0px #e7e7e7;
+	-webkit-box-shadow: 0px 1px 0px #e7e7e7;
+}
+
+/*input[type=text], input[type=password], */textarea {
+	background: #fff;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #a8a8a8;
+	border-right: 1px solid #9a9a9a;
+	border-top: 1px solid #cdcdcd;
+	/*font: 16px Arial, sans-serif;*/
+	padding: 5px;
+	-moz-border-radius: 0px; /* FF4 adds rounded borders */
+}
+
+input[type=text], input[type=password] {
+	/*height: 20px;*/
+	font-size: 14px;
+    font-family: Muli;
+}
+
+input[type=submit] {
+	background: #dfdfdf;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	font: 15px Arial, sans-serif;
+	height: 30px;
+	padding: 5px 10px;
+}
+
+textarea {
+	display: block;
+}
+
+/* Others */
+.clearfix, .star-rating:after, #leaderboard li:after {
+	display: block;
+	clear: both;
+	content: " ";
+	height: 0;
+}
+
+#m_footer {
+	margin-top: 20px;
+    width: 100%;
+    background-color: black;
+    color: rgb(170,170,170);
+}
+
+#m_container {
+	min-height: 450px;
+}
+
+#copyright {
+	padding: 10px;
+    font-size: 12px;
+}
+.bootstrap-tagsinput .tag.label {
+	position: relative;
+    top: -1px;
+}
+.bootstrap-tagsinput input {
+	vertical-align: middle;
+	min-width: 217px;
+}
+.pageTitle {
+	margin-left: 20px;
+    margin-bottom: 20px;
+}
+#users #userNameProfile {
+	font-size: 25px;
+	text-decoration: none;
+	color: rgb(241, 104, 22);
+}
+#users #userNameProfile:hover {
+	font-size: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	color: rgb(241, 104, 22);
+}
+h4 #userNameProfile {
+	font-size: 25px;
+	text-decoration: none;
+	color: rgb(241, 104, 22);
+}
+h4 #userNameProfile:hover {
+	font-size: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	color: rgb(241, 104, 22);
+}
+hr {
+	max-width: 100%;
+	clear: both;
+}
+.post-tag{
+	font-size:12px;
+	color:#39739d;
+	background-color: #E1ECF4;
+	border-color: transparent;
+	position: relative;
+    display: inline-block;
+    padding: .4em .5em;
+    margin: 2px 2px 2px 0;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    transition: all .15s ease-in-out;
+}
+.questionAuthor {
+	font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    clear: both;
+}
+.questionAuthor a{
+	font-weight: 600;
+}
