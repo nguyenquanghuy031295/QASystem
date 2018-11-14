@@ -6,7 +6,7 @@ const Header = () => {
             <div className="container">
                 <div className="navbar-header">
                     <a className="navbar-brand page-scroll" href="/qasystem">Q & A</a>
-                    <form style={{ display: "inline-block" }} role="form" method="POST" action="/qasystem/question/search">
+                    <form style={{ display: "inline-block" }} method="POST" action="/qasystem/question/search">
                         <input style={{ display: "inline-block", position: "relative" }} name="keyword" className="form-control" placeholder="Search for questions" />
                         <button style={{ display: "none", marginTop: "10px" }} className="btn btn-primary" type="submit">
                             <span className="glyphicon glyphicon-search" />
@@ -30,9 +30,9 @@ const Header = () => {
                         <li className="nav-item">
                             <a className="nav-link" id="loginHeader" href="/qasystem/login">Login</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" id="logoutHeader" style={{ display: "none" }} href="#">Log out</a>
-                        </li>
+                        {/* <li className="nav-item">
+                            <a className="nav-link" id="logoutHeader" style={{ display: "none" }}>Log out</a>
+                        </li> */}
                     </ul>
                 </div>
             </div>
