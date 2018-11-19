@@ -17,6 +17,9 @@ namespace QASystem.Domain.DomainModels
         public DateTime DOB { get; set; }
 
         public string Email { get; set; }
+
+        public Guid AspNetUserId { get; set; }
+        public virtual SystemUser AspNetUser { get; set; }
     }
 
     public partial class QASystemDbContext

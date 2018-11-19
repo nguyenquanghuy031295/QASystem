@@ -6,10 +6,12 @@ using JetBrains.Annotations;
 using QASystem.Models.DomainModels;
 using QASystem.Models.Extensions;
 using QASystem.Domain.DomainModels;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace QASystem.Models.Context
 {
-    public partial class QASystemDbContext : DbContext
+    public partial class QASystemDbContext : IdentityDbContext<SystemUser, IdentityRole<Guid>, Guid>
     {
 
         public QASystemDbContext(DbContextOptions<QASystemDbContext> options) : base(options)
@@ -18,18 +20,8 @@ namespace QASystem.Models.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyBuilderConfigurations();
-            //modelBuilder.ApplyConfiguration(new MemberConfiguration());
-            //modelBuilder.ApplyConfiguration(new AnswerConfiguration());
-            //modelBuilder.ApplyConfiguration(new QuestionConfiguration());
-            //modelBuilder.ApplyConfiguration(new TagConfiguration());
-            //modelBuilder.ApplyConfiguration(new QuestionTagConfiguration());
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=QASystem;Trusted_Connection=True;");
-        }
-
     }
 }
